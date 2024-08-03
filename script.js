@@ -1,18 +1,28 @@
-$(document).ready(function () {
-    $("#btn").click(
-        function () {
-            if ($("#email").val() === "") {
-                alert("email field is empty")
-            } else if ($("#password").val() != $("#re-password").val()) {
-                alert("password did not match")
-            }else if($('#check').prop('checked') != true ){
-                alert('Check the checkBox');
-            }else{
-                alert("submission succesful")
-            }
-        }
-    )
-  }
-)
 
+$(document).ready(function () {
+    $("#btn").click(function () {
+        // Get values from input fields
+        const email = $("#email").val();
+        const password = $("#password").val();
+        const rePassword = $("#re-password").val();
+        const isChecked = $('#check').prop('checked');
+
+        // Validate email field
+        if (email === "") {
+            alert("Email field is empty");
+        } 
+        // check password matched or not matched
+        else if (password !== rePassword) {
+            alert("Passwords do not match");
+        } 
+        // Check if checkbox is checked
+        else if (!isChecked) {
+            alert("Please check the checkbox");
+        } 
+        // if All validations passed
+        else {
+            alert("Submission successful");
+        }
+    });
+});
 
