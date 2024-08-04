@@ -6,14 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('./images/background6.jpg');
+    }
+
+    #box {
+        width: 450px;
+        height: 480px;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        padding-top: 100px;
+    }
+
+    #box label {
+        font-size: 20px;
+        color: white;
+        text-transform: capitalize;
+    }
+
+    #box label input {
+        border: none;
+        border-radius: 1vw;
+        margin: 20px 0;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 25px auto;
+        width: 80%;
+        height: 50px;
+        border-radius: 50px;
+        outline: 0;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        ;
+        color: white;
+        opacity: 0.8;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+</style>
 
 <body>
-    <div>
-        <label for="">enter email : </label><input id="email" type="text"> <br>
-        <label for="">enter password : </label><input id="password" type="text"> <br>
-        <label for="">enter re-passwoord : </label><input id="re-password" type="text"> <br>
-        <input id="check" type="checkbox">
-        agree to terms and conditions <br>
+    <div id="box">
+        <div class="field">
+            <label for="">enter email : <input id="email" type="text"></label> <br>
+            <label for="">enter password : <input id="password" type="text"></label> <br>
+            <label for="">enter re-passwoord : <input id="re-password" type="text"></label> <br>
+        </div>
+        <label for=""><input id="check" type="checkbox">
+            agree to terms and conditions </label> <br>
         <button id="btn">submit</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
